@@ -10,16 +10,22 @@
 
 /*============================= NAV STARTS ================================= */
 .logo a img{
-	width: 43%;
+	width: 40%;
     margin-top: -5px;   
 }  
 .profile_icon {
     width: 35px;
-    color: white;
+    color: wheat;
     margin-top: 7px;
 }
 header{  
-    background-color: #D04068;
+    padding-top: 10px;
+    padding-bottom: 6px;
+
+    background-color: #b6385b;
+    /* border-bottom: 2px solid #D04068; */
+
+    border-bottom: 2px solid #D04068;
 }
 .navigation {   
 	text-align: right;
@@ -30,7 +36,7 @@ header{
 }
 .navigation ul li a{   
 	font-size:18px;
- 	color: #000;
+ 	/* color: #000; */
  	padding: 0 20px;
     text-decoration: none; 
     cursor: pointer;
@@ -104,7 +110,7 @@ header{
 
 .footerCol1 i{
     margin-right:20px;
-    color: #D04068;
+    color: white;
 }
 .footerCol2{
     padding-left: 100px;
@@ -121,10 +127,16 @@ header{
     color: white;
 }
 hr.footerline{
-    border-top: 1px solid #D04068;
+    border-top: 1px solid white;
 }
 .footerCol4 p span{
-    color: #D04068;
+    color: white;
+}
+p{
+    color: white;
+}
+h6{
+    color: wheat;
 }
 .socialicon{
     margin-top: 20px;
@@ -136,9 +148,11 @@ hr.footerline{
 }
 .footer{
     
-    box-shadow: inset 0 10rem 10rem rgba(255, 0, 81, 0.12);
+    margin-top: 50px;
+    background-color: #b33b5d;
+    /* box-shadow: inset 0 10rem 10rem rgba(65, 64, 64, 0.3); */
     border-top: 1.5px solid #D04068;
-    margin-top: 0px;
+    margin-bottom: -16px;
   
 }
 /*============================= Footer ENDS ================================= */

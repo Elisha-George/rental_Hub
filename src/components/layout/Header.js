@@ -10,6 +10,7 @@ const Header = () => {
   
   const [isDropdownOpen, setDropdownOpen] = useState(false);
   const isLoggedIn = true;
+ 
 
   const toggleDropdown = () => {
     setDropdownOpen(!isDropdownOpen);
