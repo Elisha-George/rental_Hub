@@ -58,13 +58,14 @@ form h4 span{
     color: red;
 }
 .PropertyDesc{
-    font-weight: 500;
+    font-weight: 400;
     text-align: justify;
     text-justify: inter-word;
+    margin-top: 100px;
 }
 .PropertyDesc h6{
     color: #D04068;
-    font-weight: bold;
+    font-weight: 400;
 }
 .BedroomIcon i{
     padding-right: 7px;
@@ -99,7 +100,7 @@ form h4 span{
 .locationtext{
     color: #526174;
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 400;
 }
 .propertydisplay {
     text-transform: capitalize;
@@ -288,7 +289,7 @@ form h4 span{
   }
   .ratingComponent{
     position: relative;
-    bottom: 1200px;
+    bottom: 1177px;
     /* left: 560px; */
     margin-left: 550px;
     display: flex;
@@ -337,7 +338,36 @@ form h4 span{
   margin-top: -60px;
   font-weight: lighter;
 }
+.p_house_des
+{
+  color: rgb(88, 88, 88);
+}
+.city_title{
+  color: #D04068;
+  font-weight: 400;
+}
+ul{
+  list-style-type: square;
+}
+.keyFeatures{
+  color: #D04068;
+}
+.basic_neccessaties{
+  height: 300px;
+}
+
   /* ==================================================RATING COMPONENT ================================================================ */
+
+
+
+/* ==================================================REVIEW COMPONENT ================================================================ */
+.reviewTitle{
+  color: #555;
+  margin-top: -50px;
+}
+
+ /* ==================================================REVIEW  COMPONENT ================================================================ */
+
 
   
   

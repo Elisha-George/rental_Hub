@@ -169,6 +169,9 @@ export const HouseDetails = () => {
             </div>
           </div>
         </div>
+
+
+        
       </section>
 
       {/* ------------------------------IMAGES-------------------------- */}
@@ -214,13 +217,17 @@ export const HouseDetails = () => {
       </section>
 
       {/* ----------------------------------DESCRIPTION------------------------------------ */}
-      <section class="mt-5 PropertyDesc">
+      <section class="mt-4">
         <div class="container">
           <div class="row">
             <div class="col-md-8">
-              <h6>
+             <ul>
+              <li>
+              <h6 className="city_title">
                 {houses.title}, {houses.city}
               </h6>
+              </li>
+             </ul> 
               <span class="BedroomIcon">
                 <i class="fa fa-bed" aria-hidden="true"></i>
                 {houses.beds}
@@ -230,8 +237,9 @@ export const HouseDetails = () => {
                 <i class="fa fa-bath" aria-hidden="true"></i>
                 {houses.bathrooms}
               </span>
-              <p class="mt-4">{houses.description}</p>
-              <h6>Key features:</h6>
+              <p class="mt-4 p_house_des">{houses.description}</p>
+              
+              <h6 className="keyFeatures">Key features:</h6>
               <ul>
                 <li>{houses.features}</li>
               </ul>
@@ -330,6 +338,9 @@ export const HouseDetails = () => {
         </div>
       )}
 
+
+{/* ================================================RATING SECTION ============================================ */}
+
       <div className="ratingComponent">
 
 {/* Rating ki CSS RATING COMPONET NAME say save ha */}
@@ -364,6 +375,20 @@ export const HouseDetails = () => {
           
 
       </div>
+{/* ================================================RATING SECTION ============================================ */}
+
+{/* ================================================REVIEW SECTION ============================================ */}
+
+<div className="reviewSection">
+  
+</div>
+
+
+{/* ================================================REVIEW SECTION ============================================ */}
+
+
+
+
     </Layout>
   );
 };
