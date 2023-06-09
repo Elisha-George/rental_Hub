@@ -31,6 +31,7 @@ import { HouseDetails } from './pages/findHouse/HouseDetails';
 import AddPropertAddress from './pages/addProperty/AddPropertAddress';
 import AddPropertImage from './pages/addProperty/AddPropertImage';
 import AddPropertyBasic from './pages/addProperty/AddPropertyBasic';
+import {PaymentBoard} from './pages/profile/PaymentBoard';
 
 
 
@@ -81,6 +82,9 @@ function App() {
        
         <Route path='/AddPropertImage' element={<AddPropertImage />} />
         <Route path='/AddPropertAddress' element={<AddPropertAddress />} />
+
+        <Route path='/PaymentBoard' element={<PaymentBoard />} />
+
         
 
         {/* <Route path='/AddProperty_1' element={<AddProperty_1 />} /> */}

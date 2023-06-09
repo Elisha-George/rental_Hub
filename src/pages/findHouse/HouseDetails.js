@@ -2,8 +2,14 @@ import React, { useEffect, useState } from "react";
 import { Layout } from "../../components/layout/Layout";
 import { useParams } from "react-router-dom";
 import "./houseDetails.css";
+import {FaStar} from "react-icons/fa";
 
 export const HouseDetails = () => {
+
+  const [rating, setRating] = useState(null);
+  const [hover, setHover] = useState(null);
+
+
   const { property_id } = useParams();
   console.log("property_id:", property_id);
   const [houses, setHouses] = useState(null);
@@ -150,8 +156,8 @@ export const HouseDetails = () => {
               </h4>
             </div>
             <div class="col-md-3 mt-3 PropertyLocationDate">
-              <p>
-                Posted on - <span> {houses.datePosted} </span>{" "}
+              <p className="p_postedOn">
+                Posted on - <span className="span_postedOn"> {houses.datePosted} </span>{" "}
               </p>
             </div>
             <div class="PropertyLocation">
@@ -168,7 +174,7 @@ export const HouseDetails = () => {
       {/* ------------------------------IMAGES-------------------------- */}
       <section className="gallery">
         <div className="container image-container">
-          <div className="row">
+          <div className="row img_row">
             {images.map((image, index) => (
               <a
                 href="#"
@@ -293,17 +299,19 @@ export const HouseDetails = () => {
                       setFormData({ ...formData, time: e.target.value })
                     }
                   />
-                  <button type="submit" class="formbtn mt-4">
+                  <div className="bidButtons">
+                  <button type="submit" class="formbtn btn btn_sendMail mt-4">
                     Send Email
                   </button>
-                  {/* <button type="submit" class="formbtn mt-4">Send Request For Negotiation</button> */}
                   <button
                     type="button"
-                    class="formbtn mt-4"
+                    class="formbtn mt-4 btn  btn_negociation"
                     onClick={handleNegotiationRequest}
                   >
                     Send Request For Negotiation
                   </button>
+                  </div>
+                 
                 </div>
               </form>
             </div>
@@ -321,6 +329,41 @@ export const HouseDetails = () => {
           </div>
         </div>
       )}
+
+      <div className="ratingComponent">
+
+{/* Rating ki CSS RATING COMPONET NAME say save ha */}
+{/* along with the USE CASE bhi use kiyae hn Hove and Rating */}
+          {[...Array(5)].map((star, i)=>{
+
+          const ratingValue = i+1;
+
+           return(
+            <label>
+              <input 
+              type="radio"
+              className="ratingRadio" 
+              value={ratingValue}
+              name="rating"
+              onClick={() => setRating(ratingValue)} 
+             
+              />
+              
+              <FaStar 
+              className="star" 
+              color={ratingValue <= (hover || rating)  ? "#ffc107" : "#e4e5e9"}
+              size={20}
+              onMouseEnter={() => setRating(ratingValue)}
+              onMouseLeave={() => setHover(null)}
+              />
+            </label>
+           ) 
+          })}
+          <h4 className="raitingHead">{rating}</h4>
+
+          
+
+      </div>
     </Layout>
   );
 };
